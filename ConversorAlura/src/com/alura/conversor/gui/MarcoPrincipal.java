@@ -55,15 +55,18 @@ public class MarcoPrincipal extends JFrame {
 				// TODO Auto-generated method stub
 				if (panelPestagnas.getSelectedComponent() == CDivisas) {
 					InterfazPestagna.pestagnaActual = "Divisas";
+					CDivisas.reset();
 					CDivisas.setComboOrigen();
 					// InterfazPestagna.setComboOrigen();
 				} else if (panelPestagnas.getSelectedComponent() == CTemp) {
 					InterfazPestagna.pestagnaActual = "Temperatura";
+					CTemp.reset();
 					CTemp.setComboOrigen();
 					// InterfazPestagna.setComboOrigen();
 				} else if (panelPestagnas.getSelectedComponent() == CVolumen) {
 					InterfazPestagna.pestagnaActual = "Volumen";
 					System.out.println("Volumen");
+					CDivisas.reset();
 				}
 			}
 		});

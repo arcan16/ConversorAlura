@@ -163,9 +163,13 @@ public class InterfazPestagna extends JPanel {
 
 		ConversionIngreso ConvertListener = new ConversionIngreso();
 		IngresoValor.getDocument().addDocumentListener(ConvertListener);
-
+		
+		
 	}
-
+	public void reset() {
+		IngresoValor.setText("");
+		cajaResultado.setText("");
+	}
 	public void setComboOrigen() {
 		System.out.println(pestagnaActual);
 		if (pestagnaActual == "Divisas") {
