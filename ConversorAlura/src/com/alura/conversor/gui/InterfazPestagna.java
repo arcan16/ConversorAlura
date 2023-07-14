@@ -169,6 +169,7 @@ public class InterfazPestagna extends JPanel {
 	public void reset() {
 		IngresoValor.setText("");
 		cajaResultado.setText("");
+		ComboDestino.removeAllItems();
 	}
 	public void setComboOrigen() {
 		System.out.println(pestagnaActual);
@@ -179,6 +180,7 @@ public class InterfazPestagna extends JPanel {
 				ComboDestino.addItem(divisa);
 				ComboAnterior = (String) ComboOrigen.getSelectedItem();
 				ComboDestino.removeItem(ComboOrigen.getSelectedItem());
+				if(ComboDestino.getSelectedItem()==null)ComboDestino.removeItem(ComboDestino.getSelectedItem());
 			}
 		} else if (pestagnaActual == "Temperatura") {
 			ComboOrigen.removeAllItems();
